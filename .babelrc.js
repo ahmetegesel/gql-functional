@@ -9,5 +9,5 @@ module.exports = {
       },
     ],
   ],
-  plugins: ['import-graphql'],
+  plugins: ['import-graphql', '@babel/plugin-proposal-export-default-from'],
 };

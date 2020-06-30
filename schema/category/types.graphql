@@ -1,3 +1,17 @@
+input CategoryFilterInput {
+    siteId: String
+    name: String
+    linkName: String
+}
+
+type Category {
+    id: String!
+    siteId: String!
+    name: String!
+    linkName: String
+}
+
 extend type Query {
-    category: String
+    category(id: String!): Category
+    categories(filter: CategoryFilterInput): [Category]
 }

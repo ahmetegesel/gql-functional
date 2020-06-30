@@ -1,13 +1,9 @@
 import { ApolloServer } from 'apollo-server';
-import Query from './types.graphql';
+import { typeDefs, resolvers } from './schema';
 
 const server = new ApolloServer({
-  typeDefs: [Query],
-  resolvers: {
-    Query: {
-      hello: () => 'Hello World!'
-    }
-  },
+  typeDefs,
+  resolvers,
   introspection: true,
   playground: true,
 });

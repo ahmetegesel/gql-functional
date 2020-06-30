@@ -1,0 +1,38 @@
+{
+  "name": "gql-functional",
+  "version": "0.1.0",
+  "description": "This Repo is created to experiment GraphQL using Functional Programming approach",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node ./index.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "apollo-server": "^2.15.1",
+    "ramda": "^0.27.0",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.4",
+    "@babel/core": "^7.10.4",
+    "@babel/node": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "babel-plugin-import-graphql": "^2.7.0",
+    "babel-jest": "^26.1.0",
+    "jest": "^26.1.0",
+    "nodemon": "^2.0.4",
+    "@types/jest": "^26.0.3",
+    "@types/ramda": "^0.27.6"
+  },
+  "keywords": [
+    "gql",
+    "graphql",
+    "mongodb",
+    "nodejs",
+    "functional-programming",
+    "fp",
+    "ramda"
+  ],
+  "author": "Ahmet Egesel <ahmetegesel@hotmail.com>",
+  "license": "MIT"
+}

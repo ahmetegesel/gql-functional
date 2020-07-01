@@ -1,4 +1,4 @@
-import { ifElse, nAry } from 'ramda';
+import { ifElse } from 'ramda';
 
 import { allContentTypes, contentTypeBy, contentTypeById } from '../../repository/contentType';
 import { isNullOrEmpty } from '../../lib/utils';

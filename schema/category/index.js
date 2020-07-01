@@ -1,7 +1,7 @@
-import { allCategories, categoryBy, categoryById } from '../../repository/category';
+import { ifElse } from 'ramda';
+
 import { isNullOrEmpty } from '../../lib/utils';
-import { ifElse, nAry } from 'ramda';
-import { allContentTypes, contentTypeBy } from '../../repository/contentType';
+import { allCategories, categoryBy, categoryById } from '../../repository/category';
 
 export types from './types.graphql';
 

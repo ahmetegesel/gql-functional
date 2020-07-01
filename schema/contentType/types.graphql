@@ -5,9 +5,11 @@ input ContentTypeFilterInput {
 type ContentType {
     id: String!
     name: String!
+    siteId: String!
+    isApproved: Boolean!
 }
 
 extend type Query {
-    contentType(id: String!): ContentType
+    contentType(id: String!): ContentType!
     contentTypes(filter: ContentTypeFilterInput): [ContentType]
 }

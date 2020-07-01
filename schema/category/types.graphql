@@ -1,14 +1,15 @@
 input CategoryFilterInput {
-    siteId: String
     name: String
-    linkName: String
+    siteId: String
+    contentTypes: [String]
 }
 
 type Category {
     id: String!
     siteId: String!
     name: String!
-    linkName: String
+    linkName: String!
+    contentTypes: [String]
 }
 
 extend type Query {

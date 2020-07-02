@@ -1,5 +1,10 @@
 import { ApolloServer } from 'apollo-server';
+import { config } from 'dotenv';
+
 import { typeDefs, resolvers } from './schema';
+
+// Environment Variables set-up
+config();
 
 const server = new ApolloServer({
   typeDefs,

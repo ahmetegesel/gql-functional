@@ -5,7 +5,7 @@ input ContentTypeFilterInput {
 type ContentType {
     id: String!
     name: String!
-    siteId: String!
+    sites: [String!]
     isApproved: Boolean!
 }
 

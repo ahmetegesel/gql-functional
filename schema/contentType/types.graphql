@@ -1,5 +1,5 @@
 input ContentTypeFilterInput {
-    name: String
+    sites: [String!]!
 }
 
 type ContentType {

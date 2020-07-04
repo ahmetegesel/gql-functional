@@ -1,5 +1,4 @@
 input CategoryFilterInput {
-    name: String
     siteId: String
     contentTypes: [String]
 }

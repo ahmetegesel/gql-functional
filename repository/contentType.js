@@ -1,9 +1,12 @@
-import { contentTypes } from '../lib/mockData';
-import { findBy, findAll, mapResult, findById } from '../lib/db/mongodb';
 import { andThen, pipe } from 'ramda';
 
-export const allContentTypes = pipe(() => findAll('pho', 'contentTypes'), andThen(mapResult));
+import { mapResult } from '../lib/db/mongodb';
+import { findAllInMainDb, findInMainDbBy, findInMainDbById } from '../lib/db/mongodb/main';
 
-export const contentTypeBy = pipe((filter) => findBy('pho', 'contentTypes', filter), andThen(mapResult));
+const collectionName = 'contentTypes';
 
-export const contentTypeById = pipe((id) => findById('pho', 'contentTypes', id), andThen(mapResult));
+export const allContentTypes = pipe(() => findAllInMainDb(collectionName), andThen(mapResult));
+
+export const contentTypeBy = pipe((filter) => findInMainDbBy(collectionName, filter), andThen(mapResult));
+
+export const contentTypeById = pipe((id) => findInMainDbById(collectionName, id), andThen(mapResult));

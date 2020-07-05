@@ -1,10 +1,13 @@
 import { andThen, pipe } from 'ramda';
 
-import { categories } from '../lib/mockData';
-import { findAll, findBy, mapResult, findByObjectId } from '../lib/db/mongodb';
+import { mapResult } from '../lib/db/mongodb';
+import { findAllInMainDb, findInMainDbBy, findInMainDbByObjectId } from '../lib/db/mongodb/main';
 
-export const allCategories = pipe(() => findAll('pho', 'categories'), andThen(mapResult));
+const collectionName = 'categories';
 
-export const categoryBy = pipe((filter) => findBy('pho', 'categories', filter), andThen(mapResult));
+export const allCategories = pipe(() => findAllInMainDb(collectionName), andThen(mapResult));
 
-export const categoryById = pipe((id) => findByObjectId('pho', 'categories', id), andThen(mapResult));
+export const categoryBy = pipe((filter) => findInMainDbBy(collectionName, filter), andThen(mapResult));
+
+export const categoryById = pipe((id) => findInMainDbByObjectId(collectionName, id), andThen(mapResult));
+

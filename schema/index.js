@@ -1,5 +1,3 @@
-import { reduce, mergeDeepRight } from 'ramda';
-
 import { mergeDeepRightAll } from '../lib/utils';
 
 import { types as Category, resolvers as categoryResolvers } from './category';
@@ -15,6 +13,9 @@ import Query from './types.graphql';
 
 const queryResolver = {
   Query: {
+    hello: () => 'hello'
+  },
+  Mutation: {
     hello: () => 'hello'
   }
 };

@@ -1,7 +1,7 @@
 import { ifElse } from 'ramda';
 
 import { isNullOrEmpty } from '../../lib/utils';
-import { allCategories, categoryBy, categoryById } from '../../repository/category';
+import { allCategories, categoriesBy, categoryById } from '../../repository/category';
 
 export types from './types.graphql';
 
@@ -11,7 +11,7 @@ export const resolvers = {
       return categoryById(id);
     },
     categories(parent, { filter }, context, info) {
-      return ifElse(isNullOrEmpty, allCategories, categoryBy)(filter);
+      return ifElse(isNullOrEmpty, allCategories, categoriesBy)(filter);
     }
   },
 };

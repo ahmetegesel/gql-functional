@@ -1,3 +1,21 @@
+type User {
+    id: String!
+    name: String!
+}
+
+input UserFilterInput {
+    name: String
+}
+
+input UserInput {
+    name: String
+}
+
 extend type Query {
-    user: String
+    user(id: String!): User
+    users(filter: UserFilterInput): [User]
+}
+
+extend type Mutation {
+    saveUser(input: UserInput!): User!
 }

@@ -1,13 +1,14 @@
 import { andThen, pipe } from 'ramda';
 
-import { mapResult } from '../lib/db/mongodb';
+import { toModel } from '../lib/db/mongodb';
 import { findAllInMainDb, findInMainDbBy, findInMainDbByObjectId } from '../lib/db/mongodb/main';
 
 const collectionName = 'categories';
 
-export const allCategories = pipe(() => findAllInMainDb(collectionName), andThen(mapResult));
+export const allCategories = pipe(() => findAllInMainDb(collectionName), andThen(toModel));
 
-export const categoryBy = pipe((filter) => findInMainDbBy(collectionName, filter), andThen(mapResult));
+export const categoriesBy = pipe((filter) => findInMainDbBy(collectionName, filter), andThen(toModel));
 
-export const categoryById = pipe((id) => findInMainDbByObjectId(collectionName, id), andThen(mapResult));
+export const categoryById = pipe((id) => findInMainDbByObjectId(collectionName, id), andThen(toModel));
 
+// export const saveCategory =

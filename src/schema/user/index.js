@@ -1,7 +1,7 @@
 import { ifElse } from 'ramda';
 
-import { isNullOrEmpty } from '../../lib/utils';
 import { allUsers, usersBy, userById, saveUser } from '../../repository/user';
+import { isNilOrEmpty } from '../../../lib/utils';
 
 export types from './types.graphql';
 
@@ -11,7 +11,7 @@ export const resolvers = {
       return userById(id);
     },
     users(parent, { filter }) {
-      return ifElse(isNullOrEmpty, allUsers, usersBy)(filter);
+      return ifElse(isNilOrEmpty, allUsers, usersBy)(filter);
     }
   },
   Mutation: {

@@ -1,7 +1,7 @@
 import { andThen, pipe } from 'ramda';
+import { toModel, toDoc } from 'mongofn';
 
 import { findAllInMainDb, findInMainDbBy, findInMainDbByObjectId, upsertInMainDb } from '../../lib/db/main';
-import { toDoc, toModel } from '../../lib/db/mongodb/utils';
 
 const collectionName = 'users';
 

@@ -1,7 +1,7 @@
 import { andThen, pipe } from 'ramda';
+import { toModel } from 'mongofn';
 
 import { findAllInMainDb, findInMainDbBy, findInMainDbById } from '../../lib/db/main';
-import { toModel } from '../../lib/db/mongodb/utils';
 
 const collectionName = 'contentTypes';
 

@@ -1,14 +1,5 @@
 module.exports = {
-  presets: [
-    [
-      '@babel/preset-env',
-      {
-        targets: {
-          node: 'current',
-        },
-      },
-    ],
-  ],
+  presets: ['@babel/preset-env'],
   plugins: [
     'import-graphql',
     '@babel/plugin-proposal-export-default-from',

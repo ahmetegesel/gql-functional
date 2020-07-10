@@ -1,8 +1,7 @@
 import { andThen, pipe } from 'ramda';
-
+import { toModel } from 'mongofn';
 
 import { findAllInMainDb, findInMainDbBy, findInMainDbByObjectId } from '../../lib/db/main';
-import { toModel } from 'mongofn';
 
 const collectionName = 'categories';
 
